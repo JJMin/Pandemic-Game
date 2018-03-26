@@ -15,13 +15,13 @@ public class History : MonoBehaviour {
         tweenPos = GetComponentInChildren<TweenPosition>();
         if (!isShown)
         {
-            transform.FindChild("HistoryLabel").GetComponent<UILabel>().text = "▲";
+            transform.Find("HistoryLabel").GetComponent<UILabel>().text = "▲";
             tweenPos.PlayForward();
             isShown = true;
         }
         else
         {
-            transform.FindChild("HistoryLabel").GetComponent<UILabel>().text = "▼ History ▼";
+            transform.Find("HistoryLabel").GetComponent<UILabel>().text = "▼ History ▼";
             tweenPos.PlayReverse();
             isShown = false;
         }

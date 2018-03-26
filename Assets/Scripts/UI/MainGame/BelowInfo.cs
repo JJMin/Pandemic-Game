@@ -9,14 +9,14 @@ public class BelowInfo : MonoBehaviour {
     public void OnClickBelowInfo() {
         if (!isBelowPanelShown)
         {
-            transform.FindChild("BelowPanel").GetComponent<TweenPosition>().PlayForward();
-            transform.FindChild("tri").GetComponent<UILabel>().text = "▼                                                                                      ▼";
+            transform.Find("BelowPanel").GetComponent<TweenPosition>().PlayForward();
+            transform.Find("tri").GetComponent<UILabel>().text = "▼                                                                                      ▼";
             isBelowPanelShown = true;
 
         }
         else {
-            transform.FindChild("BelowPanel").GetComponent<TweenPosition>().PlayReverse();
-            transform.FindChild("tri").GetComponent<UILabel>().text = "▲                                                                                      ▲";
+            transform.Find("BelowPanel").GetComponent<TweenPosition>().PlayReverse();
+            transform.Find("tri").GetComponent<UILabel>().text = "▲                                                                                      ▲";
             isBelowPanelShown = false;
         }
        

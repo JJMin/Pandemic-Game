@@ -10,12 +10,12 @@ public class Chat : MonoBehaviour {
         {
             GetComponentInChildren<TweenPosition>().PlayForward();
             isChatBoxShow = true;
-            transform.FindChild("ChatLabel").GetComponent<UILabel>().text = "▲";
+            transform.Find("ChatLabel").GetComponent<UILabel>().text = "▲";
         }
         else {
             GetComponentInChildren<TweenPosition>().PlayReverse();
             isChatBoxShow = false;
-            transform.FindChild("ChatLabel").GetComponent<UILabel>().text = "▼ Chat ▼";
+            transform.Find("ChatLabel").GetComponent<UILabel>().text = "▼ Chat ▼";
         }
 
     }

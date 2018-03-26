@@ -16,8 +16,8 @@ public class CreateRoom : MonoBehaviour {
 
         GameSetting gamesetting = GameObject.Find("DDOL/gamesetting").GetComponent<GameSetting>();
        
-        int noPlayers=int.Parse(transform.FindChild("NoPlayers/popup/Label").GetComponent<UILabel>().text);
-        int noEPcards=int.Parse(transform.FindChild("EPcards/popup/Label").GetComponent<UILabel>().text);
+        int noPlayers=int.Parse(transform.Find("NoPlayers/popup/Label").GetComponent<UILabel>().text);
+        int noEPcards=int.Parse(transform.Find("EPcards/popup/Label").GetComponent<UILabel>().text);
         Chanllenge chanllenges=GetComponentInChildren<chanllangeChcekBox>().GetCheckStatus();
 
         gamesetting.updateGameSetting(noPlayers, noEPcards, chanllenges);

@@ -12,11 +12,11 @@ public class TeamInfo : MonoBehaviour {
     public void OnClickTeamInfo() { 
         tweenPos=GetComponentInChildren<TweenPosition>();
         if(!isShown){
-            transform.FindChild("Label").GetComponent<UILabel>().text = "▲";
+            transform.Find("Label").GetComponent<UILabel>().text = "▲";
             tweenPos.PlayForward();
             isShown=true;
         }else{
-            transform.FindChild("Label").GetComponent<UILabel>().text = "▼ Team Info ▼";
+            transform.Find("Label").GetComponent<UILabel>().text = "▼ Team Info ▼";
             tweenPos.PlayReverse();
             isShown = false;
         }
